@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>ClimaTempo</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <ion-list>
+    <ion-item>
+      <ion-input label="Nome" placeholder="Insira a cidade" [(ngModel)]="nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="temperatura" type="number" placeholder="Insira a temperatura" [(ngModel)]="temperatura"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="humidade" placeholder="Insira a humidade" [(ngModel)]="humidade"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-select label="Clima" placeholder="Selecione" [(ngModel)]="Clima">
+        <ion-select-option value="0">Sol</ion-select-option>
+        <ion-select-option value="1">Chuvoso</ion-select-option>
+        <ion-select-option value="2">Nublado</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button expand="full" (click)="cadastrar()">Cadastrar</ion-button>
+  </ion-list>
+</ion-content>

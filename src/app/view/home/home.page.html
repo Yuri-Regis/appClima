@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title id="titulo">
+      ClimaTempo
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list *ngFor="let Cidade of this.listaDeCidades; let i = index">
+  <ion-item (click)="editar(i)">
+     <ion-label>{{Cidade.nome}}</ion-label>
+     <ion-label>{{Cidade.temperatura}}°C</ion-label>
+  </ion-item>
+  </ion-list>
+
+
+  <ion-fab horizontal="end" vertical="bottom">
+    <ion-fab-button (click)="irParaCadastrar()" >
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>
